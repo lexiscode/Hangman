@@ -1,4 +1,6 @@
 import random
+import hangman_words
+import hangman_art
 
 print('''
  _                                             
@@ -12,10 +14,8 @@ print('''
 ''')
 
 ## GENERATE A RANDOM WORD ##
-words = ['the', 'keywords', 'for', 'the', 'four', 'data', 'modifiers', 'are', 'signed', 'unsigned', 'short', 'and', 'long', 'you', 'also', 
-         'going', 'learn', 'about', 'several', 'mathematical', 'functions', 'provided', 'by', 'language', 'such']
 # Pick a word/string at random from the list above
-rword_str = random.choice(words)
+rword_str = random.choice(hangman_words.words_list)
 
 ## GENERATE AS MANY BLANK-DASHES AS LETTERS IN THE WORD
 # Convert the word/string to a list
@@ -63,4 +63,4 @@ while end_of_game == False:
             end_of_game = True #Stops the while loop
             print("YOU LOSE!")
 
-    print(stages[life_lines])
+    print(hangman_art.stages[life_lines])
