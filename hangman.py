@@ -60,10 +60,10 @@ while end_of_game == False:
 
     #WHEN GUESSED LETTER IS NOT PRESENT
     if guessed_letter not in rword_str:
-        print(f"You guessed '{guessed_letter}', which is not in the word. Therefore, you lose a life.")
+        print(f"\nYou guessed '{guessed_letter}', which is not in the word. Therefore, you lose a life.")
         life_lines += 1
         if life_lines == 6:
             end_of_game = True #Stops the while loop
-            print("YOU LOSE!")
+            print("\nYOU LOSE!")
 
     print(hangman_art.stages[life_lines])
