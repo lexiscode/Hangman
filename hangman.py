@@ -15,13 +15,13 @@ print('''
 
 ## GENERATE A RANDOM WORD ##
 # Pick a word/string at random from the list above
-rword_str = random.choice(hangman_words.words_list)
+rword_str = random.choice(hangman_words.word_list)
 
 ## GENERATE AS MANY BLANK-DASHES AS LETTERS IN THE WORD
 # Convert the word/string to a list
 space_join = ' '.join(rword_str)
 rword_list = space_join.split()
-print(rword_list) #DON'T FORGET to comment/remove this print() once you're fully ready to run the Game, I left it there for viewing/testing
+#print(rword_list) #UNCOMMENT THIS FOR TESTING PURPOSE
 # Replace the list indexes with dashes, then convert back to a string format
 for i in range(len(rword_list)):
     rword_list[i] = ' __ '
@@ -39,6 +39,8 @@ while end_of_game == False:
     guessed_letter = input("Guess a letter: ")
     guessed_letter.lower()
 
+    if guessed_letter in str_rword_list:
+        print(f"You've already guessed {guessed_letter}")
     #CHECK IF THE GUESSED LETTER IS IN THE WORD
     for i in range(len(rword_str)):
         letter = rword_str[i]
@@ -58,6 +60,7 @@ while end_of_game == False:
 
     #WHEN GUESSED LETTER IS NOT PRESENT
     if guessed_letter not in rword_str:
+        print(f"You guessed '{guessed_letter}', which is not in the word. Therefore, you lose a life.")
         life_lines += 1
         if life_lines == 6:
             end_of_game = True #Stops the while loop
