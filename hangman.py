@@ -21,7 +21,7 @@ rword_str = random.choice(words)
 # Convert the word/string to a list
 space_join = ' '.join(rword_str)
 rword_list = space_join.split()
-print(rword_list) #DON'T FORGET to comment this print() once you're fully ready to run the Game, I left it there for viewing/testing
+print(rword_list) #DON'T FORGET to comment/remove this print() once you're fully ready to run the Game, I left it there for viewing/testing
 # Replace the list indexes with dashes, then convert back to a string format
 for i in range(len(rword_list)):
     rword_list[i] = ' __ '
