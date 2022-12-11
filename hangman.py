@@ -1,63 +1,15 @@
 import random
 
-print("##THE HANGMAN GAME##\n")
-
-stages = ['''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''']
+print('''
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/     
+''')
 
 ## GENERATE A RANDOM WORD ##
 words = ['the', 'keywords', 'for', 'the', 'four', 'data', 'modifiers', 'are', 'signed', 'unsigned', 'short', 'and', 'long', 'you', 'also', 
@@ -69,7 +21,7 @@ rword_str = random.choice(words)
 # Convert the word/string to a list
 space_join = ' '.join(rword_str)
 rword_list = space_join.split()
-print(rword_list)
+print(rword_list) #DON'T FORGET to comment this print() once you're fully ready to run the Game, I left it there for viewing/testing
 # Replace the list indexes with dashes, then convert back to a string format
 for i in range(len(rword_list)):
     rword_list[i] = ' __ '
