@@ -64,6 +64,6 @@ while end_of_game == False:
         life_lines += 1
         if life_lines == 6:
             end_of_game = True #Stops the while loop
-            print("\nYOU LOSE!")
+            print("\nYOU'VE BEEN HUNG! YOU LOSE!")
 
     print(hangman_art.stages[life_lines])
